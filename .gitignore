@@ -18,13 +18,10 @@ build/Release/
 build/*.target.mk
 
 # Environment variables
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .env.signing
-.env.*
 # Allow committed example/template env files so contributors know the shape.
 !.env.example
 !.env.posthog.example
@@ -33,7 +30,6 @@ build/*.target.mk
 !scripts/notarization/.env.signing.example
 
 # Editor directories and files
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -130,3 +126,4 @@ build/*
 inspiration/
 personal/*
 scripts/*
+config.bat

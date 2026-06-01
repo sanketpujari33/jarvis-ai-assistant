@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build:native": "cmake-js compile -d . -O build",
-    "build:native:release": "cmake-js compile -d . -O build --CDCMAKE_BUILD_TYPE=Release",
-    "build:ts": "tsc",
-    "build": "npm run build:native:release && npm run build:ts",
+    "build:native": "node init && cmake-js compile -d . -O build",
+    "build:native:release": "node init && cmake-js compile -d . -O build --CDCMAKE_BUILD_TYPE=Release",
+    "build:ts": "node init && tsc",
+    "build": "node init && npm run build:native:release && npm run build:ts",
     "clean": "rm -rf build dist native/*.node",
     "postinstall": "npm run build:native:release || echo 'Native build failed, will retry later'"
   },
